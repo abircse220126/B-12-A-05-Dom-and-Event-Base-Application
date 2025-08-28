@@ -6,12 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style/style.css">
 
     <title>Dom and Event Base Application</title>
 </head>
-<body>
-    <nav class="navigation flex ml-[60px] mr-[60px] justify-between">
+<body class=" bg-green-50">
+    <nav class="navigation flex ml-[60px] mr-[60px] justify-between bg-white">
         <div class="icon-section flex space-x-2" >
             <img src="assets/logo.png" alt="" class="h-[50px] w-[50px]">
             <p class="font-bold text-[#006747]">Emergency <br> Service</p>
@@ -26,17 +28,258 @@
                 <img src="assets/coin.png" alt="" class="w-[20.23px] h-[22.7px]">
             </div>
             <div class="btn w-[123px] h-[52px] bg-[#00A63E] rounded-3xl" >
-                <button class="text-[#FFFFFF]">2 copy </button>
+                <button class=" text-[#FFFFFF]">2 copy</button>
             </div>
         </div>
 
 
     </nav>
-    <div class="banner-section w-full h-[229px] bg-[#013223] text-center">
-        <img src="assets/logo-dark.png" alt="" class="w-[92px] h-[92px] my-4 mx-auto">
+    <div class="banner-section w-full h-[229px] bg-[#013223] text-center py-5 ">
+         <img src="assets/logo-dark.png" alt="" class="w-[92px] h-[92px] mx-auto ">
         <h2 class="text-[40px] font-bold text-[#FFFFFF]">Emergency Service Directory</h2>
         <p class="text-[20px] font-semibold text-[#FFFFFF]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
 
     </div>
+    <section class="service-call-list w-10/12 mx-auto grid grid-cols-12 my-5 gap-3">
+        <section class="service-container col-span-9 ">
+            <div class="box-1 flex justify-around space-y-5">
+                <div class="card-emergency w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]"> National Emergency Number</h1>
+                        <p class=" text-[16px] text-gray-400"> National Emergency</p>
+                        <p class="text-[20px] font-bold">999</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">All</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-police w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/police.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]"> Police Helpline Number</h1>
+                        <p class=" text-[16px] text-gray-400"> police</p>
+                        <p class="text-[20px] font-bold">999</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">police</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-fire w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/fire-service.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[24] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]"> Fire Service Number</h1>
+                        <p class=" text-[16px] text-gray-400">fire service</p>
+                        <p class="text-[20px] font-bold">999</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">Fire</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-sm">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="box-2 flex justify-around space-y-5">
+                <div class="card-ambulance w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/ambulance.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]"> Ambulance Service</h1>
+                        <p class=" text-[16px] text-gray-400"> Ambulance</p>
+                        <p class="text-[20px] font-bold">1994-999999</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">health</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-sm">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-women-child w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]"> Women & Child Helpline</h1>
+                        <p class=" text-[16px] text-gray-400">Women & Child Helpline</p>
+                        <p class="text-[20px] font-bold">109</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">Help</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-anti-coruption w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]">Anti-Corruption Helpline</h1>
+                        <p class=" text-[16px] text-gray-400">Anti-Corruption</p>
+                        <p class="text-[20px] font-bold">106</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">Govt.</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="box-3 flex justify-around space-y-5">
+                <div class="card-electicity w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]">Electricity Helpline</h1>
+                        <p class=" text-[16px] text-gray-400">Electricity Outage</p>
+                        <p class="text-[20px] font-bold">16216</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">Electricity</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-brac w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/brac.png" alt="" class="w-[40px] h-[40px]">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]">Brac Helpline</h1>
+                        <p class=" text-[16px] text-gray-400">Brac</p>
+                        <p class="text-[20px] font-bold">16445</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">NGO</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+                <div class="card-railway w-[325px] h-[250px] bg-white">
+                    <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
+                        <img src="assets/Bangladesh-Railway.png" alt="" class="w-[40px] h-[40px] rounded-xl">
+                        <img src="assets/download.png" alt="" class="w-[22px] h-[22px]">
+                    </div>
+                    <div class="ml-[22px] mr-[22px] mb-[22px]">
+                        <div class="card-descrip">
+                        <h1 class=" font-bold text-[20px]">Bangladesh Railway Helpline </h1>
+                        <p class=" text-[16px] text-gray-400">Bangladesh Railway</p>
+                        <p class="text-[20px] font-bold">163</p>
+                        <span class="pl-4 pr-4 bg-gray-100 rounded-md">Travel</span>
+                    </div>
+                    <div class="card-btn flex justify-center gap-3">
+                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg">
+                        <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
+                        <p>copy</p>
+                    </button>
+                    <button class="btn flex justify-center items-center pl-10 pr-13 bg-green-500 rounded-lg">
+                        <img src="assets/call.png" alt="" class="w-[13px] h-[13px]">
+                        <p>Call</p>                    
+                    </button>
+                    </div>
+                    </div>                  
+                </div>
+            </div>
+        </section>
+        <aside class="call list col-span-3 bg-white">
+            <div class="call-list flex justify-between ml-3 mr-3 mt-3">
+                <div class="call-watch flex items-center">
+                    <img src="assets/time.png" alt="" class="w-[15px] h-[15px]">
+                    <p class=" text-[16px]">Call History</p>
+                </div>
+                 <div class="clear-btn font-semibold text-[16px]">
+                <button class=" btn pl-12 pr-12 rounded-3xl bg-green-500">clear</button>
+                </div>
+            </div>
+           
+        </aside>
+    </section>
+
+    
+  
 </body>
 </html>
