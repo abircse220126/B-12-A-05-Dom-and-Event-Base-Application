@@ -1,12 +1,4 @@
 
-
-// Select all call buttons
-
-// var displyCoin=parseInt(document.getElementById('coin-count').innerText)
-// console.log(displyCoin)
-// console.log(typeof displyCoin)
-
-
 const callButtons = document.querySelectorAll(".btn-call");
 for (const button of callButtons) {
   button.addEventListener("click", () => {
@@ -24,7 +16,8 @@ for (const button of callButtons) {
 
     if(displyCoin<20){
         alert("Not enough coins! You need at least 20 to make a call.");
-          return;
+         document.getElementById('coin-count').innerText=0 ;
+          return ;
     }
     else{       
     alert(`Calling ${serviceName} at ${phoneNumber}`);  
@@ -60,7 +53,16 @@ for (const button of callButtons) {
  })
 
 
+// for love button 
 
+const loveIcon=document.getElementsByClassName("love-btn")
+for(let icon of loveIcon){
+    icon.addEventListener("click",function(){  
+        let loveCount =document.getElementById("love-count").innerText
+        const updateLove= parseInt(loveCount)+1;
+        document.getElementById("love-count").innerText=updateLove
+    })
+}
 
 
 
