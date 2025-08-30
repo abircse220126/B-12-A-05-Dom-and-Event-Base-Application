@@ -27,14 +27,19 @@ for (const button of callButtons) {
 
     // ke add korte chi tha create koro
     const newElement=document.createElement("div")
+
+    // Get current time 
+      const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
     newElement.innerHTML=`<div class="create-container bg-gray-50 rounded-lg pr-5 pl-5 pt-3 pb-3 flex justify-between items-center">
                               <div>
                               <h1 class="text-[16px] font-bold">${serviceName}</h1>
                               <p class="text-[16px] font-bold">${phoneNumber}</p>
                               </div>
                               <div>
-                              11:30pm
-                          </div>`
+                              ${timeString}
+                              </div>`
 
     //  jakhane add korte hobe sekhane add koro that means cart container a add korte hobe 
     cartContainer.append(newElement)
@@ -64,6 +69,29 @@ for(let icon of loveIcon){
     })
 }
 
+// Card button 
+
+const copyBtns=document.getElementsByClassName("copy-btn")
+for(const copyBtn of copyBtns){
+    copyBtn.addEventListener("click",function(){
+        const copyCount=document.getElementById("copy-count").innerText
+        const uCoin=parseInt(copyCount)+1;
+        // console.log(uCoin)
+        document.getElementById("copy-count").innerText=uCoin
+    
+    })
+}
 
 
-
+const copyBtn=document.getElementsByClassName("copy-btn")
+for(const button of copyBtn){
+    button.addEventListener("click",()=>{
+        const copyName=button.dataset.copy
+        const phoneNumber=button.dataset.number
+        // console.log(copyName)
+        // console.log(phoneNumber)
+        
+         alert(`${copyName} number at ${phoneNumber}`)
+         navigator.clipboard.writeText(phoneNumber)
+    })
+}

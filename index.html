@@ -13,10 +13,10 @@
     <title>Dom and Event Base Application</title>
 </head>
 <body class=" bg-green-50">
-    <nav class="navigation flex ml-[60px] mr-[60px] justify-between bg-white">
+    <nav class="navigation flex flex-col sm:flex-row items-center sm:items-center ml-[60px] mr-[60px] justify-between bg-white mt-3">
         <div class="icon-section flex space-x-2" >
-            <img src="assets/logo.png" alt="" class="h-[50px] w-[50px]">
-            <p class="font-bold text-[#006747]">Emergency <br> Service</p>
+            <img src="assets/logo.png" alt="" class=" h-[45px] w-[60px] sm:w-[70px] h-[70px]">
+            <p class="font-bold text-[#006747] text-[14px]para mt-2">Emergency <br> Service</p>
         </div>
         <div class="menu-section flex space-x-[20px]">
             <div class="love w-[123px] h-[52px] flex justify-center space-x-3 pt-4 rounded-3xl bg-[#41FF6B10]">
@@ -28,22 +28,24 @@
                 <img src="assets/coin.png" alt="" class="w-[20.23px] h-[22.7px]">
             </div>
             <div class="btn w-[123px] h-[52px] bg-[#00A63E] rounded-3xl" >
-                <button class=" text-[#FFFFFF]">0 copy</button>
+                <button class=" text-[#FFFFFF]"><span id="copy-count">0</span> copy</button>
             </div>
         </div>
-
-
     </nav>
-    <div class="banner-section w-full h-[229px] bg-[#013223] text-center py-5 ">
-         <img src="assets/logo-dark.png" alt="" class="w-[92px] h-[92px] mx-auto ">
-        <h2 class="text-[40px] font-bold text-[#FFFFFF]">Emergency Service Directory</h2>
-        <p class="text-[20px] font-semibold text-[#FFFFFF]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
 
+
+    <div class="banner-section w-full sm:h-[229px] h-[180px] bg-[linear-gradient(to_left,_#013223_0%,_#006747_50%,_#00553B_67%,_#013223_100%)] text-center py-5">
+         <img src="assets/logo-dark.png" alt="" class="w-[70px] h-[70px] sm:w-[92px] sm:h-[92px]  mx-auto ">
+        <h2 class=" text-[20px] sm:text-[40px] font-bold text-[#FFFFFF]">Emergency Service Directory</h2>
+        <p class="text-[14px] sm:text-[20px] font-semibold text-[#FFFFFF]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
     </div>
-    <section class="service-call-list w-10/12 mx-auto grid grid-cols-12 my-5 gap-3">
-        <section class="service-container col-span-9 ">
-            <div class="box-1 flex justify-around space-y-5">
-                <div class="card-emergency w-[325px] h-[250px] bg-white">
+
+
+    <section class="service-call-list w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-12 my-5 gap-3 " class="sm:flex">
+
+        <section class="service-container sm:col-span-9">
+            <div class="box-1 flex flex-col sm:flex-row justify-center sm:justify-around space-y-5 sm:space-y-0 sm:space-x-3">
+                <div class="card-emergency w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -56,7 +58,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">All</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm" data-copy="copied" data-number="999">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -67,7 +69,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-police w-[325px] h-[250px] bg-white">
+                <div class="card-police w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/police.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -80,7 +82,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">police</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm"  data-copy="copied" data-number="999">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -91,7 +93,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-fire w-[325px] h-[250px] bg-white">
+                <div class="card-fire w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/fire-service.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -104,7 +106,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">Fire</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm"  data-copy="copied" data-number="999">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -116,8 +118,8 @@
                     </div>                  
                 </div>
             </div>
-            <div class="box-2 flex justify-around space-y-5">
-                <div class="card-ambulance w-[325px] h-[250px] bg-white">
+            <div class="box-2 flex flex-col sm:flex-row justify-center sm:justify-around space-y-5 sm:space-y-0 sm:space-x-3">
+                <div class="card-ambulance w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/ambulance.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -130,7 +132,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">health</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-sm"  data-copy="copied" data-number="1994-999999">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -141,7 +143,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-women-child w-[325px] h-[250px] bg-white">
+                <div class="card-women-child w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -154,7 +156,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">Help</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                          <button class=" copy-btn btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg"  data-copy="copied" data-number="109">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -165,7 +167,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-anti-coruption w-[325px] h-[250px] bg-white">
+                <div class="card-anti-coruption w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -178,7 +180,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">Govt.</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg"  data-copy="copied" data-number="106">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -190,8 +192,8 @@
                     </div>                  
                 </div>
             </div>
-            <div class="box-3 flex justify-around space-y-5">
-                <div class="card-electicity w-[325px] h-[250px] bg-white">
+            <div class="box-3 flex flex-col sm:flex-row justify-center sm:justify-around space-y-5 sm:space-y-0 sm:space-x-3">
+                <div class="card-electicity w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/emergency.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -204,7 +206,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">Electricity</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg"  data-copy="copied" data-number="16216">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -215,7 +217,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-brac w-[325px] h-[250px] bg-white">
+                <div class="card-brac w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/brac.png" alt="" class="w-[40px] h-[40px]">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -228,7 +230,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">NGO</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1 rounded-lg"  data-copy="copied" data-number="16445">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -239,7 +241,7 @@
                     </div>
                     </div>                  
                 </div>
-                <div class="card-railway w-[325px] h-[250px] bg-white">
+                <div class="card-railway w-full sm:w-[325px] h-[250px] bg-white">
                     <div class="card-heading flex justify-between items-center ml-[22px] mr-[22px] mt-[30px]">
                         <img src="assets/Bangladesh-Railway.png" alt="" class="w-[40px] h-[40px] rounded-xl">
                         <button class="btn love-btn"><img src="assets/download.png" alt="" class="w-[22px] h-[22px]"></button>
@@ -252,7 +254,7 @@
                         <span class="pl-4 pr-4 bg-gray-100 rounded-md">Travel</span>
                     </div>
                     <div class="card-btn flex justify-center gap-3">
-                          <button class="btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg">
+                          <button class="btn copy-btn flex justify-center items-center pl-12 pr-10 border-1  rounded-lg"  data-copy="copied" data-number="163">
                         <img src="assets/copy.jpg" alt="" class="w-[13px] h-[13px]">
                         <p>copy</p>
                     </button>
@@ -265,12 +267,15 @@
                 </div>
             </div>
         </section>
-        <aside class="call list col-span-3 bg-white">
+
+
+        <aside class="call list order-first sm:order-none sm:col-span-3 bg-white mb-5 sm:mb-0">
             <div class="call-list flex justify-between ml-3 mr-3 mt-3 mb-4">
                 <div class="call-watch flex items-center">
                     <img src="assets/time.png" alt="" class="w-[15px] h-[15px]">
                     <p class=" text-[16px]">Call History</p>
                 </div>
+
                  <div class="clear-btn font-semibold text-[16px]">
                 <button class=" btn pl-12 pr-12 rounded-3xl bg-green-500" id="clear-btn">clear</button>
                 </div>
@@ -280,12 +285,46 @@
                <div id="cart-container" class="space-y-3">
 
                </div>
-            </div> 
-            
-             
+            </div>            
         </aside>
     </section>
 
 <script src="script/javascript.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
